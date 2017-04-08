@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head>
+<title>Ram&oacute;n A. Delgado</title>
+
+<link rel="stylesheet" type="text/css" href="arduinoSmartCar.css"> 
+<link rel='STYLESHEET' type='text/css' href='style.css'>
+
+</head><body>
+<div id='container'>
+<script type="text/javascript" src="includes/top.js">  </script>
+<script type="text/javascript" src="includes/menu.js">  </script>
+	<div id='content'>
+	   <h2>Arduino Smart Car</h2>
+		<div id='htlatex'>
+			   My first Arduino project is a smart car. The car is controlled with an infra-red
+			remote, but it also has self-driving capabilities. The self-driving mode, I decided
+			to make it with one objective in mind, keep on going without getting stuck in
+			simple scenarios. The ideas behind the obstacle avoidance capabilities are based
+			on trigonometry and random decisions. The code of the project can be found in
+			<a 
+			href="https://github.com/ramondelgado/smart_car" class="url" ><span 
+			class="cmtt-12">https://github.com/ramondelgado/smart_car</span></a>
+			<div class="center">
+			<!--l. 15--><p class="noindent" ><img src="images/smart_car_photo1_edited_small.jpg" alt="PIC">
+			</div>
+			   <h4 class="likesubsectionHead"><a 
+			 id="x1-1000"></a>Measurements and deterministic decisions</h4>
+			<!--l. 19--><p class="noindent" >For navigation, the smart car relies on an ultrasonic sensor that is mounted on a
+			servo. Deterministic decisions are based on three measurements, a measurement of
+			the front distance, and two measurements of the distance at 30<sup><span 
+			class="cmsy-8">&#x2218;</span></sup>; from the central
+			measurement.
+			<div class="center" 
+			>
+			<!--l. 21--><p class="noindent" >
+
+			<!--l. 22--><p class="noindent" ><img 
+			src="images/triangles.jpg" alt="PIC"  
+			></div>
+																					  
+
+																					  
+			<!--l. 25--><p class="indent" >   For a triangle, is you know three things about it, you can deduce all other
+			information. From two distance measurements, we can form a triangle. In the
+			figure, consider the triangle <span 
+			class="cmsy-10x-x-120">&#x25B3;</span><span 
+			class="cmmi-12">ABC</span>. The measurements of distance give us the
+			length of the sides <span class="overline"><span 
+			class="cmmi-12">AB</span></span> and <span class="overline"><span 
+			class="cmmi-12">AC</span></span>. The difference between the servo angles at which
+			the measurements are taken is <img 
+			src="images/arduinoSmartCar0x.png" alt="&#x2044;"  class="angle" ><span 
+			class="cmmi-12">BAC</span>, and it gives us a third fact about the
+			triangle. Knowing all this, we can complete the triangle <span 
+			class="cmsy-10x-x-120">&#x25B3;</span><span 
+			class="cmmi-12">ABC </span>and get
+			an estimate of the angle <img 
+			src="images/arduinoSmartCar1x.png" alt="&#x2044;"  class="angle" ><span 
+			class="cmmi-12">ACB</span>. This angle gives us information about
+			the wall that is straight ahead. In more detail, to get an estimate of the
+			angle <img 
+			src="images/arduinoSmartCar2x.png" alt="&#x2044;"  class="angle" ><span 
+			class="cmmi-12">ACB</span> I first get the length of the side <span class="overline"><span 
+			class="cmmi-12">BC</span></span>, denoted as <span 
+			class="cmsy-10x-x-120">|</span><span class="overline"><span 
+			class="cmmi-12">BC</span></span><span 
+			class="cmsy-10x-x-120">|</span>, as
+			follows:
+			   <center class="math-display" >
+			<img 
+			src="images/arduinoSmartCar3x.png" alt="        &#x2218;  ----------------------------------------
+			 ----      ----2    ----2    ---- ----    &#x2044;
+			|BC  | =   |AC  | + |AB | - 2 |AC  ||AB |cos(- BAC  )  " class="math-display" ></center>
+			then, the angle <img 
+			src="images/arduinoSmartCar4x.png" alt="&#x2044;"  class="angle" ><span 
+			class="cmmi-12">ACB</span> is computed using the formula
+			   <center class="math-display" >
+			<img 
+			src="images/arduinoSmartCar5x.png" alt="                              ----
+							(            |AC |)
+			&#x2044;-ACB   = arcsin   sin(&#x2044;-BAC  )-----
+										 |BC |
+			" class="math-display" ></center>
+			<!--l. 30--><p class="indent" >   Next, the same procedure is repeated with the triangle <span 
+			class="cmsy-10x-x-120">&#x25B3;</span><span 
+			class="cmmi-12">ADC</span>, to obtain the
+			angle <img 
+			src="images/arduinoSmartCar6x.png" alt="&#x2044;"  class="angle" ><span 
+			class="cmmi-12">ACD</span>.
+			<!--l. 32--><p class="indent" >   Once we get the angles <img 
+			src="images/arduinoSmartCar7x.png" alt="&#x2044;"  class="angle" ><span 
+			class="cmmi-12">ACB</span> and <img 
+			src="images/arduinoSmartCar8x.png" alt="&#x2044;"  class="angle" ><span 
+			class="cmmi-12">ACD</span>, we can decide where to go. In
+			general, you want to go in the direction of the larger angle. Additionally, if the
+			sum of the angles <img 
+			src="images/arduinoSmartCar9x.png" alt="&#x2044;
+			-"  class="angle" ><span 
+			class="cmmi-12">ACB</span> and <img 
+			src="images/arduinoSmartCar10x.png" alt="&#x2044;
+			-"  class="angle" ><span 
+			class="cmmi-12">ACD</span> is less than 90<sup><span 
+			class="cmsy-8">&#x2218;</span></sup>, the smart car may be
+			located in a dead end, and you may want to take particular actions for this
+																					  
+
+																					  
+			case.
+			<!--l. 34--><p class="noindent" >
+			   <h4 class="likesubsectionHead"><a 
+			 id="x1-2000"></a>Random decisions</h4>
+			<!--l. 35--><p class="noindent" >The car may get trapped in a cycle, to avoid the car gets stuck random decisions
+			are used. For example, when the sum of the angles <img 
+			src="images/arduinoSmartCar11x.png" alt="&#x2044;-"  class="angle" ><span 
+			class="cmmi-12">ACB</span> and <img 
+			src="images/arduinoSmartCar12x.png" alt="&#x2044;"  class="angle" ><span 
+			class="cmmi-12">ACD</span> is less than
+			90<sup><span 
+			class="cmsy-8">&#x2218;</span></sup>, the car can go backwards for a random amount of time, and then decide at
+			random to go either left or right.
+			<!--l. 37--><p class="indent" >   Another case that needs to be handled, is when the car is stuck with an object
+			that is not detected by the ultrasonic sensor. To detect this scenario, the car
+			computes an estimate of its current speed. This estimate is computed using the
+			front distance. When the speed goes below a threshold, it may be a sign that the
+			car is stuck.
+			<br><br>
+			A demosntration of the algorithm is given in the following video<br>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/75L90Lu13UI" frameborder="0" allowfullscreen></iframe>
+		</div> 
+	</div> 
+	<script type="text/javascript" src="includes/sidebar.js">  </script>
+	<script type="text/javascript" src="includes/footer.js">  </script>
+</div>
+</body></html> 
+
+                                                                          
+
+

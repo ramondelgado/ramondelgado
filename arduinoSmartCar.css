@@ -1,0 +1,129 @@
+ 
+/* start css.sty */
+#htlatex .cmr-17x-x-120{font-size:170%;}
+#htlatex.cmr-8{font-size:66%;}
+#htlatex.cmmi-12{font-style: italic;}
+#htlatex.cmsy-8{font-size:66%;}
+#htlatex p.noindent { text-indent: 0em }
+#htlatex td p.noindent { text-indent: 0em; margin-top:0em; }
+#htlatex p.nopar { text-indent: 0em; }
+#htlatex p.indent{ text-indent: 1.5em }
+#htlatex @media print {div.crosslinks {visibility:hidden;}}
+#htlatex a img { border-top: 0; border-left: 0; border-right: 0; }
+#htlatex center { margin-top:1em; margin-bottom:1em; }
+#htlatex td center { margin-top:0em; margin-bottom:0em; }
+#htlatex .Canvas { position:relative; }
+#htlatex img.math{vertical-align:middle;}
+#htlatex li p.indent { text-indent: 0em }
+#htlatex li p:first-child{ margin-top:0em; }
+#htlatex li p:last-child, li div:last-child { margin-bottom:0.5em; }
+#htlatex li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+#htlatex .enumerate1 {list-style-type:decimal;}
+#htlatex .enumerate2 {list-style-type:lower-alpha;}
+#htlatex .enumerate3 {list-style-type:lower-roman;}
+#htlatex .enumerate4 {list-style-type:upper-alpha;}
+#htlatex div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+#htlatex .obeylines-h,.obeylines-v {white-space: nowrap; }
+#htlatex div.obeylines-v p { margin-top:0; margin-bottom:0; }
+#htlatex .overline{ text-decoration:overline; }
+#htlatex .overline img{ border-top: 1px solid black; }
+#htlatex td.displaylines {text-align:center; white-space:nowrap;}
+#htlatex .centerline {text-align:center;}
+#htlatex .rightline {text-align:right;}
+#htlatex div.verbatim {font-family: monospace; white-space: nowrap; text-align:left; clear:both; }
+#htlatex .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+#htlatex div.fbox {display:table}
+#htlatex div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+#htlatex div.minipage{width:100%;}
+#htlatex div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+#htlatex div.center div {text-align: left;}
+#htlatex div.flushright, div.flushright div.flushright {text-align: right;}
+#htlatex div.flushright div {text-align: left;}
+#htlatex div.flushleft {text-align: left;}
+#htlatex .underline{ text-decoration:underline; }
+#htlatex .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+#htlatex .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+#htlatex .framebox-c {text-align:center;}
+#htlatex .framebox-l {text-align:left;}
+#htlatex .framebox-r {text-align:right;}
+#htlatex span.thank-mark{ vertical-align: super }
+#htlatex span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+#htlatex div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+#htlatex table.tabular td p{margin-top:0em;}
+#htlatex table.tabular {margin-left: auto; margin-right: auto;}
+#htlatex td p:first-child{ margin-top:0em; }
+#htlatex td p:last-child{ margin-bottom:0em; }
+#htlatex div.td00{ margin-left:0pt; margin-right:0pt; }
+#htlatex div.td01{ margin-left:0pt; margin-right:5pt; }
+#htlatex div.td10{ margin-left:5pt; margin-right:0pt; }
+#htlatex div.td11{ margin-left:5pt; margin-right:5pt; }
+#htlatex table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+#htlatex td.td00{ padding-left:0pt; padding-right:0pt; }
+#htlatex td.td01{ padding-left:0pt; padding-right:5pt; }
+#htlatex td.td10{ padding-left:5pt; padding-right:0pt; }
+#htlatex td.td11{ padding-left:5pt; padding-right:5pt; }
+#htlatex table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+#htlatex .hline hr, .cline hr{ height : 1px; margin:0px; }
+#htlatex .tabbing-right {text-align:right;}
+#htlatex span.TEX {letter-spacing: -0.125em; }
+#htlatex span.TEX span.E{ position:relative;top:0.5ex;left:-0.0417em;}
+#htlatex a span.TEX span.E {text-decoration: none; }
+#htlatex span.LATEX span.A{ position:relative; top:-0.5ex; left:-0.4em; font-size:85%;}
+#htlatex span.LATEX span.TEX{ position:relative; left: -0.4em; }
+#htlatex div.float, div.figure {margin-left: auto; margin-right: auto;}
+#htlatex div.float img {text-align:center;}
+#htlatex div.figure img {text-align:center;}
+#htlatex .marginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+#htlatex .marginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+#htlatex table.equation {width:100%;}
+#htlatex .equation td{text-align:center; }
+#htlatex td.equation { margin-top:1em; margin-bottom:1em; } 
+#htlatex td.equation-label { width:5%; text-align:center; }
+#htlatex td.eqnarray4 { width:5%; white-space: normal; }
+#htlatex td.eqnarray2 { width:5%; }
+#htlatex table.eqnarray-star, table.eqnarray {width:100%;}
+#htlatex div.eqnarray{text-align:center;}
+#htlatex div.array {text-align:center;}
+#htlatex div.pmatrix {text-align:center;}
+#htlatex table.pmatrix {width:100%;}
+#htlatex span.pmatrix img{vertical-align:middle;}
+#htlatex div.pmatrix {text-align:center;}
+#htlatex table.pmatrix {width:100%;}
+#htlatex span.bar-css {text-decoration:overline;}
+#htlatex img.cdots{vertical-align:middle;}
+#htlatex .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+#htlatex .index-item, .index-subitem, .index-subsubitem {display:block}
+#htlatex div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+#htlatex div.caption span.id{font-weight: bold; white-space: nowrap; }
+#htlatex h1.partHead{text-align: center}
+#htlatex p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+#htlatex p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+#htlatex .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+#htlatex .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+#htlatex .quote {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; margin-right:1em; text-align:justify;}
+#htlatex .verse{white-space:nowrap; margin-left:2em}
+#htlatex div.maketitle {text-align:center;}
+#htlatex h2.titleHead{text-align:center;}
+#htlatex div.maketitle{ margin-bottom: 2em; }
+#htlatex div.author, div.date {text-align:center;}
+#htlatex div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+#htlatex div.author{white-space: nowrap;}
+#htlatex .quotation {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; }
+#htlatex .abstract p {margin-left:5%; margin-right:5%;}
+#htlatex div.abstract {width:100%;}
+#htlatex .figure img.graphics {margin-left:10%;}
+#htlatex .equation td{text-align:center; }
+#htlatex .equation-star td{text-align:center; }
+#htlatex table.equation-star { width:100%; }
+#htlatex table.equation { width:100%; }
+#htlatex table.align, table.alignat, table.xalignat, table.xxalignat, table.flalign {width:100%; margin-left:5%; white-space: nowrap;}
+#htlatex table.align-star, table.alignat-star, table.xalignat-star, table.flalign-star {margin-left:auto; margin-right:auto; white-space: nowrap;}
+#htlatex td.align-label { width:5%; text-align:center; }
+#htlatex td.align-odd { text-align:right; padding-right:0.3em;}
+#htlatex td.align-even { text-align:left; padding-right:0.6em;}
+#htlatex table.multline, table.multline-star {width:100%;}
+#htlatex td.gather {text-align:center; }
+#htlatex table.gather {width:100%;}
+#htlatex div.gather-star {text-align:center;}
+/* end css.sty */
+
