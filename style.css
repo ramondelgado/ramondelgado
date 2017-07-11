@@ -166,7 +166,8 @@
 /**************** content styles ****************/
 	#content {
 	  /*width: 520px;*/
-	  width: 84%;
+	  min-width: 75%;
+	  max-width: 80%;
 	  padding-left: 10px;
 	  padding-right: 10px;
 	  padding-top: 10px;
@@ -196,17 +197,19 @@
 /**************** sidebar styles ****************/
 	#sidebar {
 	  /*width: 175px;*/
-	  width: 10%;
+	  display: inline-block;
+	  max-width:90%;
 	  padding-left: 21px;
 	  padding-right: 10px;
-	  padding-top: 10px;
-	  float: right;
+	  /*padding-top: 10px;*/
+	  float: left;
 	  }
 		
 	#sidebar p {
-	  padding-bottom: 10px;
+	  padding-bottom: 5px;
 	  border-bottom: 1px solid #DDDDDD;
 	  }
+	  
 	/**************** footer styles ****************/
 	#footer {
 	  margin-top: 15px;
