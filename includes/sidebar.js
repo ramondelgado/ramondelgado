@@ -8,6 +8,6 @@ document.write("<p><a ");
 document.write("  href='http://scholar.google.com.au/citations?user=L9US5bgAAAAJ&hl=en'");
 document.write("  target='_blank'>Google Scholar</a></p>");
 document.write("<p><a href='https://github.com/ramondelgado'>GitHub</a></p>");
-document.write("<p><img src='ramon_bio.jpg' alt='Right Align' height='112'class='center' /></p>");
+document.write("<p><img src='ramon_bio2.jpg' alt='Right Align' height='112'class='center' /></p>");
 document.write("</div>");
 
