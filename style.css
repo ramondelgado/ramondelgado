@@ -178,22 +178,80 @@
 	  padding-bottom: 10px;
 	  /*border-bottom: 1px solid #DDDDDD;*/
 	  }
+	#content p.pub-paragraph {
+		display :flex;
+		flex-wrap:wrap;
+		padding-bottom: 10px;
+	}
+	#content dd.pub-paragraph {
+		display :flex;
+		flex-wrap:wrap;
+		padding-bottom: 10px;
+		padding-left:0em;
+	}
+	#content dt.pub {
+		color:brown;
+		width: 4em;
+		float:left;
+		margin:0em;
+	}
+
 	#content span.pub {
 		color:brown;
-		font-weight: bold;
+		/*font-weight: bold;*/
 	  }	
 	#content span.bib {
 		white-space:pre-line;
 	  }
 	#content span.pub-title {
-		/*white-space:pre-line;*/
+		padding-left:0em;
 		color: #000000;
 		font-weight: bold;
+		order:1;
+	}
+	#content span.pub-authors {
+		padding-left:0.5em;
+		width :100%;
+		/*white-space:pre-line;*/
+		color: #000000;
+		order:2;
 	  }
+	#content span.pub-details {
+		padding-left:0.5em;
+		/*white-space:pre-line;*/
+		color: #000000;
+		order:3;
+	  }
+	#content span.pub-links {
+		padding-left:0.5em;
+		width :100%;
+		/*white-space:pre-line;*/
+		color: #000000;
+		order:4;
+	  }
+	#content span.pub-links::before {
+	content:"[ ";
+	}
+	#content span.pub-links::after{
+		content: "]";
+	}
+
 	#content em {
 	    	font-style: italic;
 		color: #000000;
 	  }
+	  /**************** news styles ****************/
+
+	#content dt{
+		color:brown;
+		width: 10em;
+		float:left;
+		margin:0em;
+	}
+	#content dd{
+		margin-bottom:1em;
+		padding-left:6em;
+	}
 /**************** sidebar styles ****************/
 	#sidebar {
 	  /*width: 175px;*/
