@@ -1,6 +1,6 @@
 
 document.write("<div id='header'>");
-document.write("<h1>Ram&oacute;n A. Delgado</h1>");
-document.write("<h2>Research Academic at the School of Electrical Engineering and Computing,<br>The University of Newcastle, Australia</h2>");		
+document.write("<h1>Ram&oacute;n A. Delgado Pulgar</h1>");
+document.write("<h2>Senior researcher at Ericsson Research<br>Sweden</h2>");		
 document.write("</div>");
 
